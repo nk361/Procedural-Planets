@@ -40,7 +40,7 @@ public class TerrainFace
                 Vector3 pointOnUnitSphere = pointOnUnitCube.normalized;//there's a better way to do this with more even points
                 vertices[i] = shapeGenerator.CalculatePointOnPlanet(pointOnUnitSphere);
 
-                if (x != resolution - 1 && y != resolution - 1)
+                if (x != resolution - 1 && y != resolution - 1)//this gets the three triangle points for each of the two triangles per small square on the mesh
                 {
                     triangles[triIndex] = i;
                     triangles[triIndex + 1] = i + resolution + 1;

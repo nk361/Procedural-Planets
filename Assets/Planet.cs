@@ -47,7 +47,7 @@ public class Planet : MonoBehaviour
                 //I'm still not sure if this is correct, I selected the materials manually in the unity editor for each mesh
                 //meshObj.AddComponent<MeshRenderer>().sharedMaterial = new Material(Shader.Find("Standard"));// = Resources.Load<Material>("Standard.mat");//I think all works great except this material doesn't load
                 //meshObj.AddComponent<MeshRenderer>().sharedMaterial = Instantiate(Resources.Load<Material>("Standard")) as Material;
-                meshObj.AddComponent<MeshRenderer>().sharedMaterial = new Material(Resources.Load<Material>("Standard"));
+                meshObj.AddComponent<MeshRenderer>().sharedMaterial = new Material(Resources.Load<Material>("Standard"));//no idea if this is doing anything
                 //need to put the resource into a resources folder in the project to find
                 meshFilters[i] = meshObj.AddComponent<MeshFilter>();
                 meshFilters[i].sharedMesh = new Mesh();

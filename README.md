@@ -9,3 +9,9 @@ Learning about meshes, terrain generation, and applying noise through this Unity
 
 ## Added open simplex noise to the heights of triangle points
 ![AddedNoise Image](../master/Planet%20Progress%20Pictures/AddedNoise.JPG)
+
+## Added layers of open simplex noise with increasing frequency and decreasing amplitude
+![LayerNoise Image](../master/Planet%20Progress%20Pictures/LayeredNoise.JPG)
+
+## Added layers of layers of noise with engine dynamic engine inspector settings
+![LayersOfNoiseMaskedByFirstLayer Image](../master/Planet%20Progress%20Pictures/LayersOfNoiseMaskedByFirstLayer.JPG)
