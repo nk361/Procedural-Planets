@@ -15,3 +15,6 @@ Learning about meshes, terrain generation, and applying noise through this Unity
 
 ## Added layers of layers of noise with engine dynamic engine inspector settings
 ![LayersOfNoiseMaskedByFirstLayer Image](../master/Planet%20Progress%20Pictures/LayersOfNoiseMaskedByFirstLayer.JPG)
+
+## Added rigid noise filter
+![RigidNoiseFilter Image](../master/Planet%20Progress%20Pictures/RigidNoiseFilter.JPG)
