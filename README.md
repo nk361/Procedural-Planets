@@ -18,3 +18,9 @@ Learning about meshes, terrain generation, and applying noise through this Unity
 
 ## Added rigid noise filter
 ![RigidNoiseFilter Image](../master/Planet%20Progress%20Pictures/RigidNoiseFilter.JPG)
+
+## Added planet shader based on surface height
+![ShaderBasedOnSurfaceHeight Image](../master/Planet%20Progress%20Pictures/ShaderBasedOnSurfaceHeight.JPG)
+
+## Display gradient based on height with unity editor picked colors
+![ColorGradientBasedOnHeight Image](../master/Planet%20Progress%20Pictures/ColorGradientBasedOnHeight.JPG)

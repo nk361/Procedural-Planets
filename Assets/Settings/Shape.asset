@@ -19,13 +19,13 @@ MonoBehaviour:
     noiseSettings:
       filterType: 0
       simpleNoiseSettings:
-        strength: 1
-        numLayers: 1
-        baseRoughness: 1
-        roughness: 0.2
+        strength: 0.1
+        numLayers: 8
+        baseRoughness: 0.35
+        roughness: 2.84
         persistence: 0.5
-        center: {x: 0, y: 0, z: 0}
-        minValue: 0
+        center: {x: 1.11, y: 0, z: 0}
+        minValue: 0.96
       rigidNoiseSettings:
         strength: 1
         numLayers: 1
@@ -40,20 +40,20 @@ MonoBehaviour:
     noiseSettings:
       filterType: 0
       simpleNoiseSettings:
-        strength: 1
-        numLayers: 1
+        strength: 1.5
+        numLayers: 8
         baseRoughness: 1
-        roughness: 0.2
+        roughness: 2.84
         persistence: 0.5
         center: {x: 0, y: 0, z: 0}
         minValue: 0
       rigidNoiseSettings:
-        strength: 1
-        numLayers: 1
-        baseRoughness: 1
-        roughness: 0.2
+        strength: 0.33
+        numLayers: 8
+        baseRoughness: 2.15
+        roughness: 2
         persistence: 0.5
-        center: {x: 0, y: 0, z: 0}
+        center: {x: 2.58, y: 0, z: 0}
         minValue: 0
         weightMultiplier: 0.8
   - enabled: 1
@@ -61,18 +61,18 @@ MonoBehaviour:
     noiseSettings:
       filterType: 1
       simpleNoiseSettings:
-        strength: 1
-        numLayers: 1
-        baseRoughness: 1
+        strength: 0.33
+        numLayers: 8
+        baseRoughness: 1.03
         roughness: 0.2
         persistence: 0.5
         center: {x: 0, y: 0, z: 0}
         minValue: 0
       rigidNoiseSettings:
-        strength: 1
-        numLayers: 1
+        strength: 1.5
+        numLayers: 8
         baseRoughness: 1
-        roughness: 0.2
+        roughness: 2.84
         persistence: 0.5
         center: {x: 0, y: 0, z: 0}
         minValue: 0

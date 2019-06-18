@@ -18,7 +18,8 @@ public class Planet : MonoBehaviour
     [HideInInspector]
     public bool colorSettingsFoldOut;
 
-    ShapeGenerator shapeGenerator;
+    ShapeGenerator shapeGenerator = new ShapeGenerator();
+    ColorGenerator colorGenerator = new ColorGenerator();
 
     [SerializeField, HideInInspector]
     MeshFilter[] meshFilters;
@@ -26,7 +27,8 @@ public class Planet : MonoBehaviour
 
     void Initialize()
     {
-        shapeGenerator = new ShapeGenerator(shapeSettings);
+        shapeGenerator.UpdateSettings(shapeSettings);
+        colorGenerator.UpdateSettings(colorSettings);
 
         if(meshFilters == null || meshFilters.Length == 0)
             meshFilters = new MeshFilter[6];
@@ -44,14 +46,13 @@ public class Planet : MonoBehaviour
                 GameObject meshObj = new GameObject("mesh");
                 meshObj.transform.parent = transform;
 
-                //I'm still not sure if this is correct, I selected the materials manually in the unity editor for each mesh
-                //meshObj.AddComponent<MeshRenderer>().sharedMaterial = new Material(Shader.Find("Standard"));// = Resources.Load<Material>("Standard.mat");//I think all works great except this material doesn't load
-                //meshObj.AddComponent<MeshRenderer>().sharedMaterial = Instantiate(Resources.Load<Material>("Standard")) as Material;
-                meshObj.AddComponent<MeshRenderer>().sharedMaterial = new Material(Resources.Load<Material>("Standard"));//no idea if this is doing anything
+                //You may need to select the material manually the first time
+                meshObj.AddComponent<MeshRenderer>();
                 //need to put the resource into a resources folder in the project to find
                 meshFilters[i] = meshObj.AddComponent<MeshFilter>();
                 meshFilters[i].sharedMesh = new Mesh();
             }
+            meshFilters[i].GetComponent<MeshRenderer>().sharedMaterial = colorSettings.planetMaterial;
 
             terrainFaces[i] = new TerrainFace(shapeGenerator, meshFilters[i].sharedMesh, resolution, directions[i]);
 
@@ -91,15 +92,11 @@ public class Planet : MonoBehaviour
             if(meshFilters[i].gameObject.activeSelf)
                 terrainFaces[i].ConstructMesh();
 
-        foreach (TerrainFace face in terrainFaces)
-        {
-            face.ConstructMesh();
-        }
+        colorGenerator.UpdateElevation(shapeGenerator.elevationMinMax);
     }
 
     void GenerateColors()
     {
-        foreach (MeshFilter m in meshFilters)
-            m.GetComponent<MeshRenderer>().sharedMaterial.color = colorSettings.planetColor;
+        colorGenerator.UpdateColors();
     }
 }
